@@ -41,7 +41,7 @@ class Crawler
 		href = []
 		link = /<a\s[^>]*href="([^"]*)"/x 
 		html.scan(link) do |m|
-    		href << m[0] unless m[0].start_with?("http://") || m[0].start_with?("https://")
+    		href << m[0]
 		end
 
 			#body = Nokogiri::HTML html 	
@@ -73,4 +73,3 @@ class Crawler
 	end
 
 end
-
